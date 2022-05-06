@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  name: MyString
+  short_name: MyString
+  barcode: MyString
+  unit: MyString
+  wight_brutto: 1
+  weight_netto: 1
+  volume: 1
+  width: 1
+  height: 1
+  depth: 1
+  units_in_box: 1
+  boxes_on_pallete: 1
+
+two:
+  code: MyString
+  name: MyString
+  short_name: MyString
+  barcode: MyString
+  unit: MyString
+  wight_brutto: 1
+  weight_netto: 1
+  volume: 1
+  width: 1
+  height: 1
+  depth: 1
+  units_in_box: 1
+  boxes_on_pallete: 1
