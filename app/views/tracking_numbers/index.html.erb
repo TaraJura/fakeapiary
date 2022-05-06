@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tracking numbers</h1>
+
+<div id="tracking_numbers">
+  <% @tracking_numbers.each do |tracking_number| %>
+    <%= render tracking_number %>
+    <p>
+      <%= link_to "Show this tracking number", tracking_number %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tracking number", new_tracking_number_path %>

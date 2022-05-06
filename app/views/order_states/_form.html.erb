@@ -1,0 +1,32 @@
+<%= form_with(model: order_state) do |form| %>
+  <% if order_state.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(order_state.errors.count, "error") %> prohibited this order_state from being saved:</h2>
+
+      <ul>
+        <% order_state.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :date_created, style: "display: block" %>
+    <%= form.date_field :date_created %>
+  </div>
+
+  <div>
+    <%= form.label :note, style: "display: block" %>
+    <%= form.text_field :note %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

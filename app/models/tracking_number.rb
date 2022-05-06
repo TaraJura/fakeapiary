@@ -1,0 +1,2 @@
+class TrackingNumber < ApplicationRecord
+end

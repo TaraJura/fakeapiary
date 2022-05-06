@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tracking_number %>
+
+<div>
+  <%= link_to "Edit this tracking number", edit_tracking_number_path(@tracking_number) %> |
+  <%= link_to "Back to tracking numbers", tracking_numbers_path %>
+
+  <%= button_to "Destroy this tracking number", @tracking_number, method: :delete %>
+</div>
