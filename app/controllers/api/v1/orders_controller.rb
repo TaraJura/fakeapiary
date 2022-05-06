@@ -21,8 +21,9 @@ module Api
       end
 
       def update
+        orders = Order.find(params[:id])
         Order.update(Order_params)
-        render jsonapi: Order
+        render jsonapi: orders
       end
 
       def Order_params
