@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :billings
   resources :invoices
   resources :orders do
-    post 'packaging'
+    post 'packaging', on: :member
   end
   resources :products
 
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :products, defaults: { format: :json }
     resources :orders, defaults: { format: :json } do
-      post 'packaging'
+      post 'packaging', on: :member
     end
 
     namespace :v1 do

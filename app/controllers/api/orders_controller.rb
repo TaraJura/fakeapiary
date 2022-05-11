@@ -26,7 +26,6 @@ module Api
       @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka se prave pripravuje k odeslani")
     end
 
-
     # POST /orders or /orders.json
     def create
       @order = Order.new(order_params)
