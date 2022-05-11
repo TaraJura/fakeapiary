@@ -1,6 +1,7 @@
 module Api
   class ProductsController < ApplicationController
     before_action :set_product, only: %i[ show edit update destroy ]
+    skip_before_action :verify_authenticity_token
 
     # GET /products or /products.json
     def index
