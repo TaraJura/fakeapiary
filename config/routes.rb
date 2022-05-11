@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
 
   namespace :api do
+    resources :products, defaults: {format: :json}
+
     namespace :v1 do
       resources :orders
       resources :products
