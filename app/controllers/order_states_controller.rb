@@ -65,6 +65,6 @@ class OrderStatesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_state_params
-      params.require(:order_state).permit(:name, :date_created, :note)
+      params.require(:order_state).permit(:name, :date_created, :note, :order_id)
     end
 end

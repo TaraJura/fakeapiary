@@ -27,6 +27,11 @@
   </div>
 
   <div>
+    <%= form.label :order, style: "display: block" %>
+    <%= form.select :order_id, options_for_select(Order.pluck(:id, :id)) %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

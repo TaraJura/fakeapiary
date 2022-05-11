@@ -1,0 +1,471 @@
+[
+    {
+        "order_number": "2003964424",
+        "order_number_web": "PRV1-13\/2022",
+        "order_date": "2022-01-07 00:00:00",
+        "note": "6910001862",
+        "pdf_docs": true,
+        "total": 149371.93,
+        "currency": "CZK",
+        "business_unit_id": "1",
+        "invoice": {
+            "number": "PRV1-13\/2022",
+            "date": "2022-01-07",
+            "symvar": "2003964424"
+        },
+        "billing": {
+            "method": {
+                "code": "UHRBAN",
+                "name": "Bankovní převod",
+                "iscod": false
+            },
+            "address": {
+                "name": "PHOENIX lékárenský velkoobchod, s.r.o.",
+                "company": "PHOENIX lékárenský velkoobchod, s.r.o.",
+                "street": "K pérovně 945\/7",
+                "city": "Praha 15",
+                "zip": "102 00",
+                "country": "CZ",
+                "phone": "272 077 146",
+                "email": "qibr@robotnick.weleda.cz"
+            }
+        },
+        "delivery": {
+            "method": {
+                "code": "GEI",
+                "name": "Geis",
+                "branch": null
+            },
+            "address": {
+                "name": "Konsignační sklad",
+                "company": "PHOENIX lékárenský velkoobchod, s.r.o.",
+                "street": "Fibichova  143",
+                "city": "Vysoké Mýto",
+                "zip": "566 01",
+                "country": "CZ",
+                "phone": "465731483",
+                "email": "k.chalupnikova@phoenix.cz"
+            }
+        },
+        "products": [
+            {
+                "code": "9806",
+                "barcode": "4001638098069",
+                "quantity": 24,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0707",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9572",
+                "barcode": "4001638095723",
+                "quantity": 6,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0605",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "007973F0",
+                "barcode": "3596200797309",
+                "quantity": 6,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "DNX60",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "7520",
+                "barcode": "4001638099219",
+                "quantity": 3,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0201",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "8806",
+                "barcode": "4001638088060",
+                "quantity": 36,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0515",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "0402",
+                "barcode": "8590129004024",
+                "quantity": 4,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "211104",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9809",
+                "barcode": "4001638098090",
+                "quantity": 36,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0718",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9665",
+                "barcode": "4001638096652",
+                "quantity": 12,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0614",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "8838",
+                "barcode": "4001638088381",
+                "quantity": 12,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0231",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "7756",
+                "barcode": "4001638501491",
+                "quantity": 6,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0619",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "7754",
+                "barcode": "4001638093989",
+                "quantity": 12,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0624",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "0508",
+                "barcode": "8590129005083",
+                "quantity": 15,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "211207",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "0155",
+                "barcode": "8590129000446",
+                "quantity": 30,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "211217",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "7577",
+                "barcode": "4001638500760",
+                "quantity": 6,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0715",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9571",
+                "barcode": "4001638095716",
+                "quantity": 12,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0608",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "0603",
+                "barcode": "8590129006035",
+                "quantity": 6,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "210813",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "8841",
+                "barcode": "7611916153600",
+                "quantity": 48,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0601",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "0607",
+                "barcode": "8590129006073",
+                "quantity": 6,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "210813",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "6443",
+                "barcode": "4001638526456",
+                "quantity": 6,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0417",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "7528",
+                "barcode": "4001638096560",
+                "quantity": 126,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0619",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9536",
+                "barcode": "4001638095365",
+                "quantity": 27,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H051",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9831",
+                "barcode": "4001638523165",
+                "quantity": 36,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0924",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "6471",
+                "barcode": "4001638523103",
+                "quantity": 72,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0411",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9158",
+                "barcode": "4001638091589",
+                "quantity": 12,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H053",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9651",
+                "barcode": "4001638523127",
+                "quantity": 30,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0814",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9894",
+                "barcode": "4001638098946",
+                "quantity": 18,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0417",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "9801",
+                "barcode": "4001638098014",
+                "quantity": 24,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0819",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "0589",
+                "barcode": "8590129005892",
+                "quantity": 3,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "211125",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "7523",
+                "barcode": "4001638500050",
+                "quantity": 36,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H1112",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "8067",
+                "barcode": "4001638080675",
+                "quantity": 60,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H031",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "6634",
+                "barcode": "4001638095228",
+                "quantity": 4,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0509",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "6635",
+                "barcode": "4001638095235",
+                "quantity": 16,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0871",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "8187",
+                "barcode": "4001638081870",
+                "quantity": 12,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H1114",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "7519",
+                "barcode": "4001638097086",
+                "quantity": 6,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "G1001",
+                "shelf_life": null,
+                "stock_id": 18
+            },
+            {
+                "code": "6756",
+                "barcode": "7611916160776",
+                "quantity": 6,
+                "price": 0,
+                "price_incl_vat": 0,
+                "vatrate": 0,
+                "batch": "H0602",
+                "shelf_life": null,
+                "stock_id": 18
+            }
+        ],
+        "tracking_numbers": [],
+        "order_states": [
+            {
+                "id": 10,
+                "name": "Objednávka nepotvrzena",
+                "date_created": "2022-01-10 09:33:02",
+                "note": null
+            },
+            {
+                "id": 101,
+                "name": "Expediční fronta NOVÉ ZBOŽÍ 1",
+                "date_created": "2022-01-10 09:52:37",
+                "note": null
+            },
+            {
+                "id": 103,
+                "name": "Expediční fronta NOVÉ ZBOŽÍ 3",
+                "date_created": "2022-01-10 14:40:49",
+                "note": null
+            },
+            {
+                "id": 120,
+                "name": "Expediční fronta HOTOVO",
+                "date_created": "2022-01-11 17:18:37",
+                "note": null
+            },
+            {
+                "id": 46,
+                "name": "Exportováno ke přepravci",
+                "date_created": "2022-01-12 06:40:54",
+                "note": null
+            }
+        ]
+    }
+]

@@ -1,6 +1,7 @@
 module Api
   class OrdersController < ApplicationController
     before_action :set_order, only: %i[ show edit update destroy ]
+    skip_before_action :verify_authenticity_token
 
     # GET /orders or /orders.json
     def index
@@ -20,9 +21,16 @@ module Api
     def edit
     end
 
+    def packaging
+      @order = Order.find(params[:order_id])
+      @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka se prave pripravuje k odeslani")
+    end
+
+
     # POST /orders or /orders.json
     def create
       @order = Order.new(order_params)
+      @order.order_states << OrderState.new(order_id: @order.id, name: "Vase zasilka byla prave vytvorena")
 
       respond_to do |format|
         if @order.save
