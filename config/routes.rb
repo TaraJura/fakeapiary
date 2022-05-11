@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   resources :orders
   resources :products
 
+  root to: "orders#index"
 
   namespace :api do
     resources :products, defaults: {format: :json}
+    resources :orders, defaults: {format: :json}
 
     namespace :v1 do
       resources :orders
