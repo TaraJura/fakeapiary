@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_06_125724) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_11_093400) do
   create_table "addresses", force: :cascade do |t|
     t.string "name"
     t.string "company"
@@ -73,7 +73,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_06_125724) do
     t.string "short_name"
     t.string "barcode"
     t.string "unit"
-    t.integer "wight_brutto"
+    t.integer "weight_brutto"
     t.integer "weight_netto"
     t.integer "volume"
     t.integer "width"

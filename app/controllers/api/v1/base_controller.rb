@@ -8,8 +8,6 @@ module Api
       include JSONAPI::Filtering
       include JSONAPI::Pagination
       include JSONAPI::Deserialization
-      include JSONAPI::Serializer
-      skip_before_action :authenticate_user!
 
       DEFAULT_PAGE_SIZE = 30
       before_action :authenticate
