@@ -35,6 +35,7 @@ deploy_staging:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - ssh-keyscan -4 stage.weleda.space > ~/.ssh/known_hosts
+    - ssh-keyscan -6 stage.weleda.space > ~/.ssh/known_hosts
     - ssh -l deploy -A stage.weleda.space "cd /var/www/fakeynot.weleda.space && git fetch && git checkout ${CI_BUILD_REF} && bundle install --without development test && RAILS_ENV=production bundle exec rails db:migrate && RAILS_ENV=production bundle exec rails assets:precompile && touch tmp/restart.txt"
   environment:
     name: staging
