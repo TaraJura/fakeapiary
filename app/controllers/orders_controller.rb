@@ -10,9 +10,8 @@ class OrdersController < ApplicationController
   # GET /orders/1 or /orders/1.json
   def show
     respond_to do |format|
-      format.pdf do
-        send_data Base64.decode64(@order.pdf_docs), filename: 'foo.pdf'
-      end
+      format.pdf { send_data Base64.decode64(@order.pdf_docs), filename: 'foo.pdf' }
+      format.html { redirect_to order_path(@order) }
     end
   end
 
