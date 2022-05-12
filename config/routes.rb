@@ -13,8 +13,6 @@ Rails.application.routes.draw do
   root to: "orders#index"
 
   namespace :api do
-    resources :products, defaults: { format: :json }
-    resources :orders, defaults: { format: :json }
     get '/order', to: 'orders#index', defaults: { format: :json }
     get '/order/:id', to: 'orders#show', defaults: { format: :json }
     get '/product', to: 'products#index', defaults: { format: :json }
