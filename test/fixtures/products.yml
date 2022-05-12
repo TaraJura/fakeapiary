@@ -6,7 +6,7 @@ one:
   short_name: MyString
   barcode: MyString
   unit: MyString
-  wight_brutto: 1
+  weight_brutto: 1
   weight_netto: 1
   volume: 1
   width: 1
@@ -21,7 +21,7 @@ two:
   short_name: MyString
   barcode: MyString
   unit: MyString
-  wight_brutto: 1
+  weight_brutto: 1
   weight_netto: 1
   volume: 1
   width: 1

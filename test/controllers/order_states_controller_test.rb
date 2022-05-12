@@ -17,7 +17,7 @@ class OrderStatesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create order_state" do
     assert_difference("OrderState.count") do
-      post order_states_url, params: { order_state: { date_created: @order_state.date_created, name: @order_state.name, note: @order_state.note } }
+      post order_states_url, params: { order_state: { date_created: @order_state.date_created, name: @order_state.name, note: @order_state.note, order_id: Order.first.id } }
     end
 
     assert_redirected_to order_state_url(OrderState.last)

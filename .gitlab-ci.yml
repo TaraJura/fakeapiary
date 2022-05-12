@@ -1,0 +1,47 @@
+cache:
+  key: "$CI_PROJECT_PATH_SLUG-$CI_BUILD_REF_NAME"
+  paths:
+    - vendor/bundle
+
+stages:
+  - test
+  - deploy
+
+rails:
+  stage: test
+  variables:
+    RAILS_ENV: test
+  script:
+    - chruby ruby-2.7.5
+    - cp config/database.yml.example config/database.yml
+    - eval $(ssh-agent -s)
+    - echo "${DEPLOY_KEY}" | tr -d '\r' | ssh-add - > /dev/null
+    - ssh-keyscan -4 gitlab.vmin.cz > ~/.ssh/known_hosts
+    - ssh-keyscan -6 gitlab.vmin.cz > ~/.ssh/known_hosts
+    - bundle config without development
+    - bundle install -j $(nproc) --deployment
+    - export MYSQL_PASSWORD=$(pwgen -s 20)
+    - set
+    - bin/rails db:migrate RAILS_ENV=test
+    - bin/rails test
+
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploy to staging server"
+    - eval $(ssh-agent -s)
+    - echo "${DEPLOY_KEY}" | tr -d '\r' | ssh-add - > /dev/null
+    - ssh-add -l
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan -4 stage.weleda.space > ~/.ssh/known_hosts
+    - ssh-keyscan -6 stage.weleda.space > ~/.ssh/known_hosts
+    - ssh -l deploy -A stage.weleda.space "cd /var/www/fakeynot.weleda.space && git fetch && git checkout ${CI_BUILD_REF} && bundle install --without development test && RAILS_ENV=production bundle exec rails db:migrate && RAILS_ENV=production bundle exec rails assets:precompile && touch tmp/restart.txt"
+  environment:
+    name: staging
+  only:
+    refs:
+      - main
+  except:
+    - tags
+

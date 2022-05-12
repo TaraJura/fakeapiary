@@ -26,7 +26,7 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "Volume", with: @product.volume
     fill_in "Weight netto", with: @product.weight_netto
     fill_in "Width", with: @product.width
-    fill_in "Wight brutto", with: @product.wight_brutto
+    fill_in "Wight brutto", with: @product.weight_brutto
     click_on "Create Product"
 
     assert_text "Product was successfully created"
@@ -49,7 +49,7 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "Volume", with: @product.volume
     fill_in "Weight netto", with: @product.weight_netto
     fill_in "Width", with: @product.width
-    fill_in "Wight brutto", with: @product.wight_brutto
+    fill_in "Wight brutto", with: @product.weight_brutto
     click_on "Update Product"
 
     assert_text "Product was successfully updated"

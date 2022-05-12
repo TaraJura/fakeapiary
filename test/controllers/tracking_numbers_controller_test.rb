@@ -17,7 +17,7 @@ class TrackingNumbersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create tracking_number" do
     assert_difference("TrackingNumber.count") do
-      post tracking_numbers_url, params: { tracking_number: { carrier: @tracking_number.carrier, tracking_number: @tracking_number.tracking_number } }
+      post tracking_numbers_url, params: { tracking_number: { carrier: @tracking_number.carrier, tracking_number: @tracking_number.tracking_number, order_id: Order.first.id } }
     end
 
     assert_redirected_to tracking_number_url(TrackingNumber.last)
