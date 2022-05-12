@@ -9,6 +9,11 @@ class OrdersController < ApplicationController
 
   # GET /orders/1 or /orders/1.json
   def show
+    respond_to do |format|
+      format.pdf do
+        send_data Base64.decode64(@order.pdf_docs), filename: 'foo.pdf'
+      end
+    end
   end
 
   # GET /orders/new

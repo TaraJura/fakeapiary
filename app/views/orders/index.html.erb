@@ -6,6 +6,7 @@
   <% @orders.each do |order| %>
     <%= render order %>
     <p>
+      <%= link_to "Give me PDF", order_path(order, format: :pdf) %>
       <%= link_to "Show this order", order %>
     </p>
   <% end %>
