@@ -21,6 +21,10 @@ gem "bootsnap", require: false
 gem "rspec-rails"
 gem "rswag-specs"
 
+group :production do
+  gem 'mysql2'
+end
+
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
