@@ -49,14 +49,14 @@ class OrdersController < ApplicationController
     end
   end
 
-  def set_state
-    if params[:transport]
-      @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka se prave pripravuje k odeslani")
-    elsif params[:packaging]
-      @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka predana dopravci")
-      @order.tracking_numbers << TrackingNumber.new(order_id: @order.id, carrier: "DPD", tracking_number: "123456" )
-    end
-  end
+#  def set_state
+#    if order_params[:transport]
+#      @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka se prave pripravuje k odeslani")
+#    elsif params[:packaging]
+#      @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka predana dopravci")
+#      @order.tracking_numbers << TrackingNumber.new(order_id: @order.id, carrier: "DPD", tracking_number: "123456" )
+#    end
+#  end
 
   def packaging
     @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka se prave pripravuje k odeslani")
