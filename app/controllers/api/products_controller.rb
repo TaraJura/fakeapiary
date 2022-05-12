@@ -11,15 +11,6 @@ module Api
     def show
     end
 
-    # GET /products/new
-    def new
-      @product = Product.new
-    end
-
-    # GET /products/1/edit
-    def edit
-    end
-
     # POST /products or /products.json
     def create
       @product = Product.new(product_params)

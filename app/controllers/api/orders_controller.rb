@@ -11,22 +11,6 @@ module Api
     def show
     end
 
-    # GET /orders/new
-    def new
-      @order = Order.new
-    end
-
-    def packaging
-      @order = Order.find(params[:order_id])
-      @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka se prave pripravuje k odeslani")
-    end
-
-    def transport
-      @order = Order.find(params[:order_id])
-      @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka predana dopravci")
-      @order.tracking_numbers << TrackingNumber.new(order_id: @order.id, carrier: "DPD", tracking_number: "123456" )
-    end
-
     # POST /orders or /orders.json
     def create
       @order = Order.new(order_params)
@@ -53,14 +37,14 @@ module Api
     end
 
     # DELETE /orders/1 or /orders/1.json
-#    def destroy
-#      @order.destroy
-#
-#      respond_to do |format|
-#        format.html { redirect_to orders_url, notice: "Order was successfully destroyed." }
-#        format.json { head :no_content }
-#      end
-#    end
+    def destroy
+      @order.destroy
+
+      respond_to do |format|
+        format.html { redirect_to orders_url, notice: "Order was successfully destroyed." }
+        format.json { head :no_content }
+      end
+    end
 
     private
       # Use callbacks to share common setup or constraints between actions.
