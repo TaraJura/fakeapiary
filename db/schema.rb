@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_11_131150) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_12_073617) do
   create_table "addresses", force: :cascade do |t|
     t.string "name"
     t.string "company"
@@ -92,7 +92,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_11_131150) do
     t.string "tracking_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "order_id", null: false
+    t.index ["order_id"], name: "index_tracking_numbers_on_order_id"
   end
 
   add_foreign_key "order_states", "orders"
+  add_foreign_key "tracking_numbers", "orders"
 end

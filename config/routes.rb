@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :invoices
   resources :orders do
     post 'packaging', on: :member
+    post 'transport', on: :member
   end
   resources :products
 
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
     resources :products, defaults: { format: :json }
     resources :orders, defaults: { format: :json } do
       post 'packaging', on: :member
+      post 'transport', on: :member
     end
   end
 end

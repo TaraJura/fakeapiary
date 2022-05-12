@@ -65,6 +65,6 @@ class TrackingNumbersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tracking_number_params
-      params.require(:tracking_number).permit(:carrier, :tracking_number)
+      params.require(:tracking_number).permit(:carrier, :tracking_number, :order_id)
     end
 end
