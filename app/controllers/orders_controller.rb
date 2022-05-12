@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
   def show
     respond_to do |format|
       format.pdf { send_data Base64.decode64(@order.pdf_docs), filename: 'foo.pdf' }
-      format.html { redirect_to order_path(@order) }
+      format.html { order_path(@order) }
     end
   end
 

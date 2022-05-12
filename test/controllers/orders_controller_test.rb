@@ -22,11 +22,11 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to order_url(Order.last)
   end
-  # PDF
-  #test "should show order" do
-  #  get order_url(@order)
-  #  assert_response :success
-  #end
+
+  test "should show order" do
+    get order_url(@order)
+    assert_response :success
+  end
 
   test "should get edit" do
     get edit_order_url(@order)
