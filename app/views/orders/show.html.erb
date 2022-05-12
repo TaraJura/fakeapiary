@@ -8,6 +8,6 @@
     <%= button_to "Destroy this order", @order, method: :delete %>
 
   <hr>
-  <%= button_to "Jdu balit zasilku", order_packaging_path(order_id: @order.id) %>
-  <%= button_to "zasilka hotovo, odeslana", orders_path %>
+  <%= button_to "Jdu balit zasilku", packaging_order_path(order_id: @order.id) %>
+  <%= button_to "zasilka hotovo, odeslana", transport_order_path(order_id: @order.id) %>
 </div>
