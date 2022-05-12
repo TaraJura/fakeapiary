@@ -54,15 +54,6 @@ class OrdersController < ApplicationController
     @order.tracking_numbers << TrackingNumber.new(carrier: "DPD", tracking_number: rand(1e5..1e6).to_i ) if params[:create_tracking_number]
   end
 
-  def packaging
-    @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka se prave pripravuje k odeslani")
-  end
-
-  def transport
-    @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka predana dopravci")
-    @order.tracking_numbers << TrackingNumber.new(order_id: @order.id, carrier: "DPD", tracking_number: "123456" )
-  end
-
   # DELETE /orders/1 or /orders/1.json
   def destroy
     @order.destroy
