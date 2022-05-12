@@ -1,7 +1,6 @@
 module Api
   class ProductsController < ApplicationController
     before_action :set_product, only: %i[ show edit update destroy ]
-    skip_before_action :verify_authenticity_token
 
     # GET /products or /products.json
     def index
@@ -46,13 +45,13 @@ module Api
     end
 
     # DELETE /products/1 or /products/1.json
-    def destroy
-      @product.destroy
-
-      respond_to do |format|
-        format.json { head :no_content }
-      end
-    end
+#    def destroy
+#      @product.destroy
+#
+#      respond_to do |format|
+#        format.json { head :no_content }
+#      end
+#    end
 
     private
       # Use callbacks to share common setup or constraints between actions.
