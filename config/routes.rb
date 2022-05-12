@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :orders do
     post 'packaging', on: :member
     post 'transport', on: :member
+    post 'set_state', on: :member
   end
   resources :products
 
@@ -21,3 +22,4 @@ Rails.application.routes.draw do
     end
   end
 end
+

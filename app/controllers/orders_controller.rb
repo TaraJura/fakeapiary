@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[ show edit update destroy ]
+  before_action :set_order, only: %i[ show edit update destroy packaging transport ]
   skip_before_action :verify_authenticity_token
 
   # GET /orders or /orders.json
@@ -49,13 +49,20 @@ class OrdersController < ApplicationController
     end
   end
 
+  def set_state
+    if params[:transport]
+      @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka se prave pripravuje k odeslani")
+    elsif params[:packaging]
+      @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka predana dopravci")
+      @order.tracking_numbers << TrackingNumber.new(order_id: @order.id, carrier: "DPD", tracking_number: "123456" )
+    end
+  end
+
   def packaging
-    @order = Order.find(params[:order_id])
     @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka se prave pripravuje k odeslani")
   end
 
   def transport
-    @order = Order.find(params[:order_id])
     @order.order_states << OrderState.new(order_id: @order.id, name: "Zasilka predana dopravci")
     @order.tracking_numbers << TrackingNumber.new(order_id: @order.id, carrier: "DPD", tracking_number: "123456" )
   end
@@ -78,6 +85,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:order_number, :order_number_web, :note, :pdf_docs, :total, :currency, :business_unit_id)
+      params.require(:order).permit(:order_number, :order_number_web, :note, :pdf_docs, :total, :currency, :business_unit_id, :transport, :packaging)
     end
 end
