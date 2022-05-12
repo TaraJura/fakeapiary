@@ -17,10 +17,5 @@ Rails.application.routes.draw do
     resources :orders, defaults: { format: :json } do
       post 'packaging', on: :member
     end
-
-    namespace :v1 do
-      resources :orders
-      resources :products
-    end
   end
 end
