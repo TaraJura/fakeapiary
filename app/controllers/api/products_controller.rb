@@ -35,15 +35,6 @@ module Api
       end
     end
 
-    # DELETE /products/1 or /products/1.json
-#    def destroy
-#      @product.destroy
-#
-#      respond_to do |format|
-#        format.json { head :no_content }
-#      end
-#    end
-
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_product
