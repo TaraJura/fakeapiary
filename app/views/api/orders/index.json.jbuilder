@@ -1,5 +1,5 @@
 
-json.orders @orders.all.each do |order|
+json.array! @orders.all.each do |order|
   json.order_number order.order_number
   json.order_date order.created_at
   json.state_id order.state_id
