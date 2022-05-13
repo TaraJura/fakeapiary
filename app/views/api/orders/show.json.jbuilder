@@ -9,7 +9,7 @@ json.total @order.id
 json.currency @order.id
 json.business_unit_id @order.id
 
-json.order_numbers @order.tracking_numbers do |t_numbers|
+json.tracking_numbers @order.tracking_numbers do |t_numbers|
   json.carrier t_numbers.carrier
   json.tracking_number t_numbers.tracking_number
 end
