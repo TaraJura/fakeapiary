@@ -13,11 +13,11 @@ module Api
 
     # POST /orders or /orders.json
     def create
-      @order = Order.new
+      @order = Order.new(order_params.merge(order_number: params[:order_number]))
       @order.order_states << OrderState.new(order_id: @order.id, name: "Vase zasilka byla prave vytvorena")
 
       respond_to do |format|
-        if @order.save
+        if @order.save!
           format.json { render :show, status: :created, location: @order }
         else
           format.json { render json: @order.errors, status: :unprocessable_entity }

@@ -4,7 +4,7 @@ json.order_number @order.order_number
 json.order_number_web @order.order_number_web
 json.order_date @order.created_at.strftime('%Y-%m-%d')
 json.note @order.note
-if @order.pdf_docs.size > 2
+if @order.pdf_docs&.size&.> 2
   json.pdf_docs "True"
 else
   json.pdf_docs "False"

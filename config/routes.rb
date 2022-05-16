@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   namespace :api do
-    post '/order', to: 'orders#create', defaults: { format: :json }
+    post '/order/:order_number', to: 'orders#create', defaults: { format: :json }
     put '/order/:order_number', to: 'orders#update', defaults: { format: :json }
     get '/order', as: 'orders', to: 'orders#index', defaults: { format: :json }
     get '/order/:order_number', to: 'orders#show', defaults: { format: :json }
