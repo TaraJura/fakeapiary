@@ -2,9 +2,13 @@
 
 json.order_number @order.order_number
 json.order_number_web @order.order_number_web
-json.order_date @order.created_at
+json.order_date @order.created_at.strftime('%Y-%m-%d')
 json.note @order.note
-json.pdf_docs @order.pdf_docs
+if @order.pdf_docs.size > 2
+  json.pdf_docs "True"
+else
+  json.pdf_docs "False"
+end
 json.total @order.total
 json.currency @order.currency
 json.business_unit_id @order.business_unit_id
