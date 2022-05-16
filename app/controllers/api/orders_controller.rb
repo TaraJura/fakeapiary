@@ -48,7 +48,7 @@ module Api
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_order
-        @order = Order.find(params[:id])
+        @order = Order.find_by!(order_number: params[:order_number])
       end
 
       # Only allow a list of trusted parameters through.
