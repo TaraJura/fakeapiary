@@ -10,11 +10,11 @@ Rails.application.routes.draw do
   end
   resources :products
 
-  root to: "orders#index"
+  root to: "home#index"
 
   namespace :api do
     post '/order', to: 'orders#create', defaults: { format: :json }
-    get '/order', to: 'orders#index', defaults: { format: :json }
+    get '/order', as: 'orders', to: 'orders#index', defaults: { format: :json }
     get '/order/:id', to: 'orders#show', defaults: { format: :json }
     get '/product', to: 'products#index', defaults: { format: :json }
     get '/product/:id', to: 'products#show', defaults: { format: :json }
