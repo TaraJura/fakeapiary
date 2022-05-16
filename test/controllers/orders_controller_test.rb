@@ -17,7 +17,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create order" do
     assert_difference("Order.count") do
-      post orders_url, params: { order: { business_unit_id: @order.business_unit_id, currency: @order.currency, note: @order.note, order_number: @order.order_number, order_number_web: @order.order_number_web, pdf_docs: @order.pdf_docs, total: @order.total } }
+      post orders_url, params: { order: { business_unit_id: @order.business_unit_id, currency: @order.currency, note: @order.note, order_number: "4545846", order_number_web: @order.order_number_web, pdf_docs: @order.pdf_docs, total: @order.total } }
     end
 
     assert_redirected_to order_url(Order.last)
@@ -34,7 +34,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update order" do
-    patch order_url(@order), params: { order: { business_unit_id: @order.business_unit_id, currency: @order.currency, note: @order.note, order_number: @order.order_number, order_number_web: @order.order_number_web, pdf_docs: @order.pdf_docs, total: @order.total } }
+    patch order_url(@order), params: { order: { business_unit_id: @order.business_unit_id, currency: @order.currency, note: @order.note, order_number: "15615651616", order_number_web: @order.order_number_web, pdf_docs: @order.pdf_docs, total: @order.total } }
     assert_redirected_to order_url(@order)
   end
 
