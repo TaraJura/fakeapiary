@@ -14,6 +14,7 @@ rails:
   script:
     - chruby ruby-2.7.5
     - cp config/database.yml.example config/database.yml
+    - cp config/api.yml.example config/api.yml
     - eval $(ssh-agent -s)
     - echo "${DEPLOY_KEY}" | tr -d '\r' | ssh-add - > /dev/null
     - ssh-keyscan -4 gitlab.vmin.cz > ~/.ssh/known_hosts
