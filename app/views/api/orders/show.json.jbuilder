@@ -19,8 +19,8 @@ json.tracking_numbers @order.tracking_numbers do |t_numbers|
 end
 
 json.order_states @order.order_states do |o_states|
-  json.id o_states.id
+  json.id o_states.code
   json.name o_states.name
-  json.date_created o_states.date_created
+  json.date_created o_states.created_at.strftime('%Y-%m-%d')
   json.note o_states.note
 end
