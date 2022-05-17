@@ -61,7 +61,7 @@ class OrdersController < ApplicationController
 
   def set_tracking
     @order.order_states << OrderState.new(name: "Expedicni fronta hotovo", code: "120")
-    @order.tracking_numbers << TrackingNumber.new(carrier: "DPD", tracking_number: rand(1e5..1e6).to_i )
+    @order.tracking_numbers << TrackingNumber.new(carrier: "GLS", tracking_number: rand(1e10..1e11).to_i )
     redirect_to @order, notice: "Bylo nastaveno tracking number"
     Typhoeus.post("#{Rails.configuration.api['pipe_url']}/orders/#{@order.order_number}/ping")
   end
