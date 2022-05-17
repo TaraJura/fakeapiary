@@ -6,8 +6,11 @@
   <%= link_to "Edit this order", edit_order_path(@order) %> |
   <%= link_to "Back to orders", orders_path %>
     <%= button_to "Destroy this order", @order, method: :delete %>
-
   <hr>
-  <%= button_to "Jdu balit zasilku", set_state_order_path(order_id: @order.id) %>
-  <%= button_to "zasilka hotovo, odeslana", set_state_order_path(order_id: @order.id, create_tracking_number: true) %>
+  <%-if !@order.order_states.pluck(:code).include?("101") %>
+    <%= button_to "Jdu balit zasilku", set_state_order_path(@order) %>
+  <%- end %>
+  <%-if !@order.order_states.pluck(:code).include?("120") %>
+    <%= button_to "zasilka hotovo, odeslana", set_tracking_order_path(@order), data: {disable_with: "zzz"} %>
+  <%- end %>
 </div>

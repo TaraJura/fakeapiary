@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :invoices
   resources :orders do
     post 'set_state', on: :member
+    post 'set_tracking', on: :member
   end
   resources :products
 

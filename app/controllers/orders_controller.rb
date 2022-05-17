@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[show edit update destroy packaging transport set_state]
+  before_action :set_order, only: %i[show edit update destroy packaging transport set_state set_tracking]
   skip_before_action :verify_authenticity_token
 
   # GET /orders or /orders.json
@@ -54,9 +54,16 @@ class OrdersController < ApplicationController
   end
 
   def set_state
-    @order.order_states << OrderState.new(name: params[:name])
-    @order.tracking_numbers << TrackingNumber.new(carrier: "DPD", tracking_number: rand(1e5..1e6).to_i ) if params[:create_tracking_number]
+    @order.order_states << OrderState.new(name: "Balime", code: "101")
+    redirect_to @order, notice: "Stav byl zmenen"
   end
+
+  def set_tracking
+    @order.order_states << OrderState.new(name: "Expedicni fronta hotovo", code: "120")
+    @order.tracking_numbers << TrackingNumber.new(carrier: "DPD", tracking_number: rand(1e5..1e6).to_i )
+    redirect_to @order, notice: "Bylo nastaveno tracking number"
+  end
+
 
   # DELETE /orders/1 or /orders/1.json
   def destroy
