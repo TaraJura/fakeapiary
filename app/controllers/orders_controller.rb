@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
   # POST /orders or /orders.json
   def create
     @order = Order.new(order_params)
-    @order.order_states << OrderState.new(order_id: @order.id, name: "Vase zasilka byla prave vytvorena")
+    @order.order_states << OrderState.new(order_id: @order.id, name: "Vase zasilka byla prave vytvorena", code: "10")
 
     respond_to do |format|
       if @order.save
