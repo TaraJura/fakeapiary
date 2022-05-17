@@ -1,0 +1,8 @@
+production:
+  pipe_url: https://stage.pipe.weleda.space
+
+development:
+  pipe_url: https://stage.pipe.weleda.space
+
+test:
+  pipe_url: https://stage.pipe.weleda.space
